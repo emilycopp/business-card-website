@@ -45,4 +45,20 @@ p {
 	position: relative;
 }
 
+@media only screen and (min-width: 48em) {
 
+	body {
+		font-size: 110%;
+	}
+
+	img {
+		padding-left: 1.4rem;
+		width: 66px;
+	}
+
+	div {
+		margin-left: 5.5rem;
+		margin-right: 1.4rem;
+	}
+
+}
