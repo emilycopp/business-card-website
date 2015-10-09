@@ -145,10 +145,4 @@ p {
 		display: none;
 	}
 
-	.banner {
-		width: auto;
-		height: 2in;
-		overflow: hidden;
-	}
-
 }
