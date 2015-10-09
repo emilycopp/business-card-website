@@ -16,33 +16,51 @@ body {
 	margin: 0;
 }
 
+.banner {
+	position: relative;
+	margin-right: 0;
+}
+
+.image {
+	width: 100%;
+	padding-top: 0;
+}
+
 h1 {
 	font-size: 2.4em;
 	font-family: 'Fugaz One', cursive;
-	position: relative;
+	color: #bfe7f2;
+	position: absolute;
+	margin: 0;
+	margin-left: .65rem;
+	top: 3em;
+	left: 0;
 	}
 
 nav {
 	position: absolute;
 	top: 0;
 	float: left;
+	width: 4rem;
+	height: 100%;
+	background: #2c2c2c;
 }
 
 img {
-	width: 53px;
+	width: 3rem;
 	display: block;
 	margin: 0;
-	padding: 21px 0;
-	background-color: #2c2c2c;
+	padding-top: 21px;
 }
 
 div {
 	margin-left: 4rem;
-	margin-right: .65rem;
+	margin-right: .65em;
 }
 p {
 	line-height: 21px;
-	position: relative;
+	position: absolute;
+	margin-left: .65rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -51,14 +69,86 @@ p {
 		font-size: 110%;
 	}
 
+	.image {
+		padding-left: 0;
+	}
+
+	nav {
+		width: 5.525rem;
+		height: 100%;
+	}
+
 	img {
 		padding-left: 1.4rem;
-		width: 66px;
+		width: 5rem;
 	}
 
 	div {
-		margin-left: 5.5rem;
-		margin-right: 1.4rem;
+		margin-left: 5em;
+		margin-right: 1.4em;
+	}
+
+}
+
+@media only screen and (min-width: 75em) {
+
+	body {
+		font-size: 120%;
+	}
+
+	img {
+		width: 6rem;
+	}
+
+	.text-banner {
+		position: relative;
+		margin-right: 0;
+	}
+
+	nav {
+		width: 8.5em;
+	}
+
+	h1 {
+		top: 6em;
+	}
+
+	p {
+		color: #fff;
+		position: absolute;
+		bottom: 8em;
+		left: 0;
+		margin-right: 42rem;
+	}
+
+	div {
+		margin-left: 8.5em;
+		margin-right: 6em;
+	}
+}
+
+@media print {
+
+	@page {
+		size: 3.5in 2in;
+	}
+
+	h1 {
+		font-size: 15pt;
+	}
+
+	p {
+	display: none;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.banner {
+		width: auto;
+		height: 2in;
+		overflow: hidden;
 	}
 
 }
