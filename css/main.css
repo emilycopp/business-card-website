@@ -14,6 +14,7 @@ html {
 
 body {
 	margin: 0;
+	position: relative;
 }
 
 .banner {
@@ -32,7 +33,7 @@ h1 {
 	color: #bfe7f2;
 	position: absolute;
 	margin: 0;
-	margin-left: .65rem;
+	margin-left: 1.8em;
 	top: 3em;
 	left: 0;
 	}
@@ -40,34 +41,36 @@ h1 {
 nav {
 	position: absolute;
 	top: 0;
-	float: left;
+	bottom: 0;
 	width: 4rem;
 	height: 100%;
-	background: #2c2c2c;
+	background: rgba(0,0,0,0.6);
 }
 
 img {
-	width: 3rem;
+	width: 4rem;
 	display: block;
 	margin: 0;
 	padding-top: 21px;
 }
 
-div {
-	margin-left: 4rem;
-	margin-right: .65em;
-}
 p {
+	margin-bottom: 0;
+}
+
+.text-banner {
 	line-height: 21px;
-	position: absolute;
-	margin-left: .65rem;
+	margin-left: 4.65rem;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 @media only screen and (min-width: 48em) {
 
-	body {
-		font-size: 110%;
-	}
+	h1 {
+		font-size: 4em;
+		margin-left: 1.6em;
+}
 
 	.image {
 		padding-left: 0;
@@ -75,7 +78,6 @@ p {
 
 	nav {
 		width: 5.525rem;
-		height: 100%;
 	}
 
 	img {
@@ -83,14 +85,14 @@ p {
 		width: 5rem;
 	}
 
-	div {
-		margin-left: 5em;
+	.text-banner {
+		margin-left: 6.2em;
 		margin-right: 1.4em;
 	}
 
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 57em) {
 
 	body {
 		font-size: 120%;
@@ -100,41 +102,51 @@ p {
 		width: 6rem;
 	}
 
-	.text-banner {
-		position: relative;
-		margin-right: 0;
-	}
 
 	nav {
 		width: 8.5em;
 	}
 
 	h1 {
-		top: 6em;
+		top:0;
+		margin-left: 3em;
 	}
 
 	p {
-		color: #fff;
-		position: absolute;
-		bottom: 8em;
-		left: 0;
-		margin-right: 42rem;
+		margin-top: 0;
 	}
 
-	div {
-		margin-left: 8.5em;
-		margin-right: 6em;
+	.text-banner {
+		margin-top: 0;
+		color: #fff;
+		background: radial-gradient(rgba(0,0,0,.6), rgba(0,0,0,0));
+		position: absolute;
+		top: 6em;
+		left: 6em;
+		width: 50%;
+		margin-left: 6em;
 	}
 }
 
 @media print {
 
-	@page {
-		size: 3.5in 2in;
+	body {
+		width: 3.5in;
+		height: 2in;
 	}
 
 	h1 {
-		font-size: 15pt;
+		color: #fff;
+		top: 2em;
+		margin-left: .25in;
+		font-size: 22pt;
+	}
+
+	h1::after {
+		content: "emily.copp0013@gmail.com";
+		display: block;
+		font-size: 10pt;
+		font-family: Arial;
 	}
 
 	p {
